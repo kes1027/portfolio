@@ -1,0 +1,185 @@
+@charset 'utf-8';
+
+/* s: header */
+#header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13.1rem;
+  background: #fff;
+}
+
+#header nav {
+  display: flex;
+  height: 13.1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+#header .menu {
+  margin: 0 auto 0 28rem;
+  display: flex;
+  font-weight: 500;
+  font-size: 2.2rem;
+  gap: 6rem;
+}
+
+#header .gnb {
+  width: 5rem;
+  height: 1rem;
+}
+#header .btn-menu::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #000;
+}
+#header .btn-menu::after {
+  margin-top: 10px;
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #000;
+}
+
+/* //e: header */
+
+/* s: 공통 부분 */
+.section .inner {
+  padding-top: 13.1rem;
+  font: 2.4rem 'IvyPresto Headline', sans-serif;
+  position: relative;
+}
+.section .inner h2 {
+  font-weight: 700;
+  font-size: 40rem;
+  line-height: 120%;
+  letter-spacing: -12px;
+
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+}
+.portfolio {
+  font-weight: 400;
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  transform: translateX(-25%) rotate(-90deg);
+}
+/* //e: 공통 부분 */
+
+/* s: Home */
+.section .inner .design-info h2 {
+  line-height: 80%;
+}
+.section1 .inner .design-info p {
+  display: inline-block;
+  font-size: 2.4rem;
+  transform: rotate(-90deg);
+  font-weight: 400;
+  margin: 4.8rem 0;
+}
+.section1 .inner .design-info strong {
+  font-weight: 300;
+  font-size: 3.8rem;
+  position: absolute;
+  top: 58.2rem;
+  right: 14.5rem;
+}
+
+.section1 .inner .go-portfolio {
+  position: absolute;
+  top: 34.9rem;
+  right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 2.9rem;
+  height: 32.6rem;
+}
+.section1 .inner .go-portfolio img {
+  height: 15rem;
+}
+.section1 .inner .go-portfolio p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  transform: rotate(90deg);
+}
+
+.section1 .inner .scroll-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* //e: Home */
+
+/* s: about */
+.section2 .inner {
+  background: rgba(0, 0, 0, 0.5);
+}
+.section2 .inner .dashboard {
+  background: #f00;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section2 .inner .dashboard .tiles {
+  border: 2px solid #000;
+  width: 47.7rem;
+  height: 77rem;
+  /* aspect-ratio: 1/1.618; */
+  display: grid;
+  grid-template-rows: 475px 73px 45px 183px;
+  grid-template-columns: 114px 72px 295px;
+}
+.section2 .inner .dashboard .tiles li:nth-child(1) {
+  border: 2px solid #000;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+.section2 .inner .dashboard .tiles li:nth-child(2) {
+  border: 2px solid #000;
+  grid-column: 3/4;
+  grid-row: 2/5;
+}
+.section2 .inner .dashboard .tiles li:nth-child(3) {
+  border: 2px solid #000;
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+.section2 .inner .dashboard .tiles li:nth-child(4) {
+  border: 2px solid #000;
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+.section2 .inner .dashboard .tiles li:nth-child(5) {
+  border: 2px solid #000;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.section2 .inner .dashboard .tiles li:nth-child(6) {
+  border: 2px solid #000;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+/* //e: about */
+.btn-top {
+  background: #000;
+  width: 100px;
+  height: 100px;
+}
