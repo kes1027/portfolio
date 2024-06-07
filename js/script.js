@@ -51,8 +51,9 @@ $(function () {
   // 3. 초기화 실행
   const projectSlider = new Swiper('.project-slider', {
     loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
 
-    // autoplay: true,
     autoplay: {
       delay: 3000 /* 3초 기다렸다가 실행 */,
     },
