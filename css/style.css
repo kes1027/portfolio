@@ -8,7 +8,8 @@
   left: 0;
   width: 100%;
   height: 13.1rem;
-  background: #fff;
+  background: var(--white-color);
+  backdrop-filter: blur(30px);
 }
 
 #header nav {
@@ -54,9 +55,19 @@
 /* //e: header */
 
 /* s: 공통 부분 */
+.line {
+  position: absolute;
+  top: calc(100vh + 100px);
+  left: 38.5417%;
+  z-index: -1;
+  width: 3034px;
+  height: 3034px;
+  background: url(../img/line.svg) no-repeat 0 0 / cover;
+  pointer-events: none;
+}
 .section .inner {
   padding-top: 13.1rem;
-  font: 2.4rem 'IvyPresto Headline', sans-serif;
+  font: 2.4rem 'ivypresto-headline', sans-serif;
   position: relative;
 }
 .section .inner h2 {
@@ -64,7 +75,6 @@
   font-size: 40rem;
   line-height: 120%;
   letter-spacing: -12px;
-
   position: absolute;
   bottom: 100px;
   left: 0;
@@ -86,50 +96,150 @@
 .section1 .inner .design-info p {
   display: inline-block;
   font-size: 2.4rem;
-  transform: rotate(-90deg);
+  writing-mode: vertical-lr;
+  rotate: 180deg;
   font-weight: 400;
-  margin: 4.8rem 0;
+  margin-bottom: 4.8rem;
 }
 .section1 .inner .design-info strong {
   font-weight: 300;
   font-size: 3.8rem;
   position: absolute;
-  top: 58.2rem;
+  bottom: 40rem;
   right: 14.5rem;
 }
 
+/* s: section1_portfolio ani */
 .section1 .inner .go-portfolio {
   position: absolute;
   top: 34.9rem;
   right: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   width: 2.9rem;
   height: 32.6rem;
 }
-.section1 .inner .go-portfolio img {
-  height: 15rem;
-}
-.section1 .inner .go-portfolio p {
-  font-weight: 400;
-  font-size: 2.4rem;
-  transform: rotate(90deg);
+
+.ScrollHint-Text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.ScrollHint-Text p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  writing-mode: vertical-rl;
+  text-transform: capitalize;
+}
+
+/* arrow 크기 조절 */
+.ScrollHint-Arrow {
+  /* background: #f00; */
+  display: block;
+  width: 100%;
+  height: 150px;
+  rotate: 180deg;
+  position: relative;
+}
+
+.ScrollHint-Arrow:before,
+.ScrollHint-Arrow:after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  content: '';
+}
+
+.ScrollHint-Arrow:before {
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  animation: scroll1Anime 2s ease infinite;
+  background-color: var(--black-color);
+}
+
+.ScrollHint-Arrow:after {
+  top: 100%;
+
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+
+  animation: scroll2Anime 2s ease infinite;
+}
+
+@keyframes scroll1Anime {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  20% {
+    height: 0;
+    opacity: 1;
+  }
+  80% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scroll2Anime {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  20% {
+    top: 100%;
+    opacity: 1;
+  }
+  80% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+/* //e: section1_portfolio ani */
+
+/* s: scroll-btn */
 .section1 .inner .scroll-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.fade-in-down {
+  animation: fade-in-down 2s ease infinite;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* //e: scroll-btn */
+
 /* //e: Home */
 
 /* s: about */
-.section2 {
-  background: url(../img/bg-1.png) 0 0 no-repeat;
-}
 .section2 .inner .dashboard {
   position: absolute;
   right: 0;
@@ -156,7 +266,7 @@
 .section2 .inner .dashboard .tiles li h3 {
   font-weight: 300;
   line-height: 120%;
-  font: 2rem 'IvyPresto Headline', sans-serif;
+  font: 2rem 'ivypresto-headline', sans-serif;
   text-transform: capitalize;
 }
 
@@ -222,9 +332,6 @@
 /* //e: about */
 
 /* s: project */
-.section3 {
-  background: url(../img/bg-2.png) 0 0 no-repeat;
-}
 .section3 .inner {
   position: relative;
 }
@@ -285,9 +392,6 @@
 /* //e: project */
 
 /* s: contact */
-.section4 {
-  background: url(../img/bg-3.png) 0 0 no-repeat;
-}
 .section4 .inner {
   /* background: rgba(0, 0, 0, 0.5); */
   position: relative;
