@@ -1,316 +1,350 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kes portfolio</title>
+    <!-- link -->
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- script -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kes portfolio</title>
-  <!-- link -->
-  <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/aos.css" />
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <!-- script -->
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/jquery.fullpage.min.js"></script>
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/aos.js"></script>
-  <script src="./js/script.js"></script>
+  <body>
+    <!-- s: cursor -->
+    <div class="custom-cursor"></div>
 
-</head>
-
-<body>
-  <!-- s: header -->
-  <header id="header">
-    <div class="inner">
-      <nav>
-        <h1 class="logo" data-menuanchor="section1">
-          <!-- 질문 -->
-          <a href="#section1">KES</a>
-        </h1>
-        <ul class="menu">
-          <li data-menuanchor="section2"><a href="#section2">About</a></li>
-          <li data-menuanchor="section3"><a href="#section3">Project</a></li>
-          <li data-menuanchor="section4"><a href="#section4">Contact</a></li>
-        </ul>
-        <div class="gnb">
-          <button type="button" class="btn-menu">
-            <i class="hidden">menu</i>
-          </button>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!-- //e: header -->
-
-  <!-- s: main -->
-  <main id="fullpage">
-    <div class="line"></div>
-    <section class="section section1">
+    <!-- s: header -->
+    <header id="header">
       <div class="inner">
-        <div class="design-info">
-          <p>2024</p>
-          <h2><b>UX</b> designer</h2>
-          <strong>+ k.eunso1027@gmail.com </strong>
-        </div>
-
-        <div class="scroll-btn">
-          <div class="cell">
-            <div class="circle fade-in-down">
-              <img src="./img/scroll_btn.svg" alt="scroll" />
-            </div>
-          </div>
-        </div>
-
-        <div class="go-portfolio">
-          <div class="ScrollHint-Text">
-            <span class="ScrollHint-Arrow"></span>
-            <p>portfolio</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section2">
-      <div class="inner">
-        <h2>about.</h2>
-        <p class="portfolio">portfolio</p>
-        <div class="dashboard">
-          <ul class="tiles">
-            <li>
-              <h3>Education</h3>
-            </li>
-            <li>
-              <h3>achievement</h3>
-            </li>
-            <li>
-              <h3>activities</h3>
-            </li>
-            <li>
-              <h3>Training</h3>
-            </li>
-            <li>
-              <h3>Career</h3>
-            </li>
-            <li>
-              <h3>skills</h3>
-            </li>
+        <nav>
+          <h1 class="logo" data-menuanchor="section1">
+            <a href="#section1">KES</a>
+          </h1>
+          <ul class="menu">
+            <li data-menuanchor="section2"><a href="#section2">About</a></li>
+            <li data-menuanchor="section3"><a href="#section3">Project</a></li>
+            <li data-menuanchor="section4"><a href="#section4">Contact</a></li>
           </ul>
-        </div>
+          <div class="gnb">
+            <button type="button" class="btn-menu">
+              <i class="hidden">menu</i>
+            </button>
+          </div>
+        </nav>
       </div>
-    </section>
+    </header>
+    <!-- //e: header -->
 
-    <section class="section section3">
-      <div class="inner">
-        <h2>project.</h2>
-        <p class="portfolio">portfolio</p>
+    <!-- s: main -->
+    <main id="fullpage">
+      <div class="line"></div>
+      <section class="section section1">
+        <div class="inner">
+          <div class="design-info">
+            <p>2024</p>
+            <h2><b>UX</b> designer</h2>
+            <strong
+              ><a href="mailto:k.eunso1027@gmail.com"
+                >+ k.eunso1027@gmail.com</a
+              ></strong
+            >
+          </div>
 
-        <!-- slider 전체적인 크기와 배치를 결정하는 div -->
-        <div class="project-slider-wrap">
-          <!-- 슬라이더를 구별하는 이름 -->
-          <div class="swiper project-slider">
-            <div class="swiper-wrapper">
-              <!-- Slides1 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide1" /></figure>
-                <div class="slide-info">
-                  <strong class="category">ux design</strong>
-                  <div class="project-title">
-                    <h4>portfolio design</h4>
-                    <div class="date">2024.06</div>
+          <div class="scroll-btn">
+            <div class="cell">
+              <div class="circle fade-in-down">
+                <img src="./img/scroll_btn.svg" alt="scroll" />
+              </div>
+            </div>
+          </div>
+
+          <div class="go-portfolio">
+            <div class="ScrollHint-Text">
+              <span class="ScrollHint-Arrow"></span>
+              <a href="#section3">
+                <p>portfolio</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section2">
+        <div class="inner">
+          <h2>about.</h2>
+          <p class="portfolio">portfolio</p>
+          <div class="dashboard">
+            <ul class="tiles">
+              <li onclick="goToSlide(0)">
+                <h3 class="target">Education</h3>
+              </li>
+              <li onclick="goToSlide(1)">
+                <h3 class="target">achievement</h3>
+              </li>
+              <li onclick="goToSlide(2)">
+                <h3 class="target">activities</h3>
+              </li>
+              <li onclick="goToSlide(3)">
+                <h3 class="target">Training</h3>
+              </li>
+              <li onclick="goToSlide(4)">
+                <h3 class="target">Career</h3>
+              </li>
+              <li onclick="goToSlide(5)">
+                <h3 class="target">skills</h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section3">
+        <div class="inner">
+          <h2>project.</h2>
+          <p class="portfolio">portfolio</p>
+
+          <!-- slider 전체적인 크기와 배치를 결정하는 div -->
+          <div class="project-slider-wrap">
+            <!-- 슬라이더를 구별하는 이름 -->
+            <div class="swiper project-slider">
+              <div class="swiper-wrapper">
+                <!-- Slides1 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide1" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">ux design</strong>
+                    <div class="project-title">
+                      <h4>portfolio design</h4>
+                      <div class="date">2024.06</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides2 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide2" /></figure>
-                <div class="slide-info">
-                  <strong class="category">ux design</strong>
-                  <div class="project-title">
-                    <h4>kumho enc web redesign</h4>
-                    <div class="date">2024.05</div>
+                <!-- Slides2 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide2" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">ux design</strong>
+                    <div class="project-title">
+                      <h4>kumho enc web redesign</h4>
+                      <div class="date">2024.05</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides3 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide3" /></figure>
-                <div class="slide-info">
-                  <strong class="category">microsite design</strong>
-                  <div class="project-title">
-                    <h4>COCO microsite design</h4>
-                    <div class="date">2024.03</div>
+                <!-- Slides3 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide3" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">microsite design</strong>
+                    <div class="project-title">
+                      <h4>COCO microsite design</h4>
+                      <div class="date">2024.03</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides4 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide4" /></figure>
-                <div class="slide-info">
-                  <strong class="category">ux design</strong>
-                  <div class="project-title">
-                    <h4>haagendazs web redesign</h4>
-                    <div class="date">2024.02</div>
+                <!-- Slides4 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide4" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">ux design</strong>
+                    <div class="project-title">
+                      <h4>haagendazs web redesign</h4>
+                      <div class="date">2024.02</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides5 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide5" /></figure>
-                <div class="slide-info">
-                  <strong class="category">page design</strong>
-                  <div class="project-title">
-                    <h4>viage product detail page</h4>
-                    <div class="date">2023.03</div>
+                <!-- Slides5 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide5" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">page design</strong>
+                    <div class="project-title">
+                      <h4>viage product detail page</h4>
+                      <div class="date">2023.03</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides6 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide6" /></figure>
-                <div class="slide-info">
-                  <strong class="category">page design</strong>
-                  <div class="project-title">
-                    <h4>kimpop app detail page</h4>
-                    <div class="date">2023.03</div>
+                <!-- Slides6 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide6" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">page design</strong>
+                    <div class="project-title">
+                      <h4>kimpop app detail page</h4>
+                      <div class="date">2023.03</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides7 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide7" /></figure>
-                <div class="slide-info">
-                  <strong class="category">page design</strong>
-                  <div class="project-title">
-                    <h4>urban miner product page</h4>
-                    <div class="date">2023.02</div>
+                <!-- Slides7 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide7" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">page design</strong>
+                    <div class="project-title">
+                      <h4>urban miner product page</h4>
+                      <div class="date">2023.02</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides8 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide8" /></figure>
-                <div class="slide-info">
-                  <strong class="category">page design</strong>
-                  <div class="project-title">
-                    <h4>festival on app detail page</h4>
-                    <div class="date">2022.12</div>
+                <!-- Slides8 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide8" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">page design</strong>
+                    <div class="project-title">
+                      <h4>festival on app detail page</h4>
+                      <div class="date">2022.12</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides9 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide9" /></figure>
-                <div class="slide-info">
-                  <strong class="category">ux design</strong>
-                  <div class="project-title">
-                    <h4>medicpet app design</h4>
-                    <div class="date">2022.09</div>
+                <!-- Slides9 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide9" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">ux design</strong>
+                    <div class="project-title">
+                      <h4>medicpet app design</h4>
+                      <div class="date">2022.09</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides10 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide10" /></figure>
-                <div class="slide-info">
-                  <strong class="category">ux design</strong>
-                  <div class="project-title">
-                    <h4>Cocacola Web Redesign</h4>
-                    <div class="date">2022.08</div>
+                <!-- Slides10 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide10" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">ux design</strong>
+                    <div class="project-title">
+                      <h4>Cocacola Web Redesign</h4>
+                      <div class="date">2022.08</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides11 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide11" /></figure>
-                <div class="slide-info">
-                  <strong class="category">ux design</strong>
-                  <div class="project-title">
-                    <h4>luple web redesign</h4>
-                    <div class="date">2021.11</div>
+                <!-- Slides11 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide11" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">ux design</strong>
+                    <div class="project-title">
+                      <h4>luple web redesign</h4>
+                      <div class="date">2021.11</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides12 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide12" /></figure>
-                <div class="slide-info">
-                  <strong class="category">service design</strong>
-                  <div class="project-title">
-                    <h4>adInCar service design</h4>
-                    <div class="date">2021.04</div>
+                <!-- Slides12 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide12" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">service design</strong>
+                    <div class="project-title">
+                      <h4>adInCar service design</h4>
+                      <div class="date">2021.04</div>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Slides13 -->
-              <div class="swiper-slide">
-                <figure><img src="#" alt="slide13" /></figure>
-                <div class="slide-info">
-                  <strong class="category">service design</strong>
-                  <div class="project-title">
-                    <h4>Sell WeService Design</h4>
-                    <div class="date">2021.04</div>
+                <!-- Slides13 -->
+                <div class="swiper-slide">
+                  <figure><img src="#" alt="slide13" /></figure>
+                  <div class="slide-info">
+                    <strong class="category">service design</strong>
+                    <div class="project-title">
+                      <h4>Sell WeService Design</h4>
+                      <div class="date">2021.04</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section4">
-      <div class="inner">
-        <h2>contact.</h2>
-        <p class="portfolio">portfolio</p>
-        <div class="contact-wrap">
-          <div class="sentance">
-            <p>
-              <span class="indent"></span>A UX/UI designer and web publisher
-              who acts as a stepping stone between designers and developers. I
-              want to grow based on a steady record and provide an excellent
-              user experience.
-            </p>
-          </div>
-          <div class="c-phone">
-            <h4>phone</h4>
-            <p>010-3832-7614</p>
-          </div>
-          <div class="c-name">
-            <h4>name</h4>
-            <p>kim eunso</p>
-          </div>
-          <div class="c-email">
-            <h4>e-mail</h4>
-            <p>k.eunso1027@gmail.com</p>
-          </div>
-          <div class="c-SNS">
-            <h4>SNS</h4>
-            <div class="link">
-              <a href="https://www.behance.net/eunsokim"><i class="hidden">behance</i></a>
-              <a href="https://www.linkedin.com/in/keunso1027/"><i class="hidden">linkedin</i></a>
+      <section class="section section4">
+        <div class="inner">
+          <h2>contact.</h2>
+          <p class="portfolio">portfolio</p>
+          <div class="contact-wrap">
+            <div class="sentance">
+              <p>
+                <span class="indent"></span>A UX/UI designer and web publisher
+                who acts as a stepping stone between designers and developers. I
+                want to grow based on a steady record and provide an excellent
+                user experience.
+              </p>
+            </div>
+            <div class="c-phone">
+              <h4>phone</h4>
+              <p>010-3832-7614</p>
+            </div>
+            <div class="c-name">
+              <h4>name</h4>
+              <p>kim eunso</p>
+            </div>
+            <div class="c-email">
+              <h4>e-mail</h4>
+              <a href="mailto:k.eunso1027@gmail.com">
+                <p>k.eunso1027@gmail.com</p>
+              </a>
+            </div>
+            <div class="c-SNS">
+              <h4>SNS</h4>
+              <div class="link">
+                <a href="https://www.behance.net/eunsokim"
+                  ><i class="hidden">behance</i></a
+                >
+                <a href="https://www.linkedin.com/in/keunso1027/"
+                  ><i class="hidden">linkedin</i></a
+                >
+              </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <!-- about-sliders -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+      <button class="close-btn">Close</button>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <button type="button" class="btn-top"><i class="hidden">TOP</i></button>
-</body>
-
+    <!-- top button -->
+    <button type="button" class="btn-top"><i class="hidden">TOP</i></button>
+  </body>
 </html>
