@@ -1,9 +1,9 @@
 @charset 'utf-8';
 
 /* pretendard */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 /* ivypresto headline */
-@import url("https://use.typekit.net/ajl0sdf.css");
+@import url('https://use.typekit.net/ajl0sdf.css');
 
 :root {
   font-size: 62.5%; /* 10px */
@@ -49,7 +49,7 @@ hr,
 }
 
 body {
-  font: 2.6rem "Pretendard", sans-serif;
+  font: 2.6rem 'Pretendard', sans-serif;
   color: #000;
   line-height: 1.2;
   cursor: none;
@@ -69,13 +69,19 @@ body {
   pointer-events: none;
   /* 드래그 */
   user-select: none;
-
-  z-index: 100;
+  z-index: 2000;
 }
 
-/* .custom-cursor.hover {
+.custom-cursor.hover {
+  transition: 0.4s;
   width: 80px;
   height: 80px;
+}
+
+.custom-cursor.light {
   transition: 0.4s;
-} */
+  width: 80px;
+  height: 80px;
+  border-color: #fff;
+}
 /* //e: cursor events */
