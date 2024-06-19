@@ -1,10 +1,45 @@
 $(function () {
+  // s: 애니메이션
+  const tl = gsap.timeline();
+
+  tl.from('.logo', { y: -100, autoAlpha: 0 });
+  tl.from('.menu li', { y: -100, autoAlpha: 0, duration: 1, stagger: 0.1 });
+  tl.from('.gnb', { y: -100, autoAlpha: 0 }, '-=0.3');
+  tl.from('.design-info p', { y: -100, autoAlpha: 0 });
+  tl.from('.design-info h2', { y: -100, autoAlpha: 0 });
+  tl.from('.scroll-btn', { y: -100, autoAlpha: 0 }, '-=0.3');
+  tl.from('.design-info strong', { y: -100, autoAlpha: 0 }, '-=0.3');
+  tl.from('.go-portfolio', { y: -100, autoAlpha: 0 });
+  // e: 애니메이션
+
+  //splitting
+  // Splitting();
+
   // 변수저장
   // AOS.init();
-  const $header = $('header');
   const $btnTop = $('.btn-top');
   // 각 영역별 aos.js를 적용할 대상
   const $aniEl = $('[data-aos]');
+
+  // s: 서브 메뉴 버튼
+  const $btnMenu = $('.btn-menu');
+  const $dim = $('.dim');
+  const $menuWrap = $('.submenu-wrap');
+
+  // s: cursor events
+  const $window = $(window);
+  const $cursor = $('.custom-cursor');
+
+  // s: 서브 메뉴 버튼
+  // 메뉴 버튼을 클릭했을 때 메뉴창이 보이게
+  $btnMenu.on('click', function () {
+    $menuWrap.toggleClass('active');
+    $dim.fadeToggle();
+
+    // 햄버거 버튼에 on클래스 토글
+    $btnMenu.toggleClass('on');
+  });
+  // e: 서브 메뉴 버튼
 
   // 탑버튼
   // 탑버튼이 처음에는 안 보이게
@@ -26,9 +61,24 @@ $(function () {
     // * 섹션 영역의 콘텐츠 세로 정렬
     verticalCentered: false,
     // 영역에 진입한 후
-    afterLoad: function (anchorLink) {
-      // section4 영역에 진입하면 탑 버튼이 보이게
+
+    // s: 애니메이션
+    afterLoad: function (anchorLink, index) {
+      if (anchorLink === 'section2') {
+        // s: about-ani
+        // tl.from('.section2 h2', { y: -100, autoAlpha: 0 });
+        // tl.from('.section2 .dashboard', { y: -100, autoAlpha: 0 });
+      }
+      if (anchorLink === 'section3') {
+        // s: project-ani
+        // tl.from('.section3 h2', { y: -100, autoAlpha: 0 });
+        // tl.from('.autoplay-progress', { y: -100, autoAlpha: 0 });
+        // tl.from('.section3 .project-slider-wrap', { y: -100, autoAlpha: 0 }, '-=0.3');
+      }
       if (anchorLink === 'section4') {
+        // s: contact-ani
+        // tl.from('.section4 h2', { y: -100, autoAlpha: 0 });
+        // section4 영역에 진입하면 탑 버튼 보임
         $btnTop.fadeIn();
       }
 
@@ -37,7 +87,14 @@ $(function () {
     },
 
     // 영역을 떠나갈 때
+
     onLeave: function (index, nextIndex, direction) {
+      if (index === 1) {
+      }
+      if (index === 2) {
+      }
+      if (index === 3) {
+      }
       // 4번 영역을 떠나가거나 마우스 휠을 올렸을 때
       if (index === 4 || direction === 'up') {
         $btnTop.fadeOut();
@@ -45,6 +102,7 @@ $(function () {
       $aniEl.removeClass('aos-animate');
     },
   });
+  // e: 애니메이션
 
   // 슬라이더
   // s: 3. 초기화 실행
@@ -58,12 +116,30 @@ $(function () {
     },
     speed: 1000, //슬라이드 되는 속도 : 기본값 300ms (0.3초)
     effect: 'slide', // 기본값(slide), fade, cube, coverflow, flip, card 등
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+
+    on: {
+      autoplayTimeLeft(swiper, timeLeft, percentage) {
+        // console.log(timeLeft, percentage);
+        //timeLeft: 남은 시간 (ms)
+        //percentage: 진행 상태를 1~0사이의 값으로 표현
+
+        // 원으로 진행률 표시
+        document.querySelector('.autoplay-progress svg').style.setProperty('--progress', 1 - percentage);
+
+        // ceil: 올림, 올림한 값을 정수로 표현
+        // document.querySelector('.autoplay-progress span').textContent = `${Math.ceil(timeLeft / 1000)}s`;
+        // document.querySelector('.autoplay-progress span').textContent = Math.ceil((1 - percentage) * 100) + '%';
+        // 원으로 진행률 표시
+      },
+    },
   });
 
   // s: cursor events
-  // 대상을 변수에 저장
-  const $window = $(window);
-  const $cursor = $('.custom-cursor');
 
   // 브라우저 창에서 마우스가 움직일 때
   $window.on('mousemove', function (e) {
@@ -107,29 +183,17 @@ $(function () {
   // s: popup slide
   let swiper;
   // s: swiper_button_연결
-  document
-    .querySelector('.education')
-    .addEventListener('click', () => goToSlide(0));
+  document.querySelector('.education').addEventListener('click', () => goToSlide(0));
 
-  document
-    .querySelector('.achievement')
-    .addEventListener('click', () => goToSlide(1));
+  document.querySelector('.achievement').addEventListener('click', () => goToSlide(1));
 
-  document
-    .querySelector('.activities')
-    .addEventListener('click', () => goToSlide(2));
+  document.querySelector('.activities').addEventListener('click', () => goToSlide(2));
 
-  document
-    .querySelector('.training')
-    .addEventListener('click', () => goToSlide(4));
+  document.querySelector('.training').addEventListener('click', () => goToSlide(4));
 
-  document
-    .querySelector('.career')
-    .addEventListener('click', () => goToSlide(5));
+  document.querySelector('.career').addEventListener('click', () => goToSlide(5));
 
-  document
-    .querySelector('.skills')
-    .addEventListener('click', () => goToSlide(6));
+  document.querySelector('.skills').addEventListener('click', () => goToSlide(6));
 
   document.querySelector('.close-btn').addEventListener('click', closePopup);
   // e: swiper_button_연결
@@ -141,7 +205,7 @@ $(function () {
     if (!swiper) {
       swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
-        // centeredSlides: true,
+        centeredSlides: true,
         autoplay: {
           delay: 3000,
           disableOnInteraction: false,

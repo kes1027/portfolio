@@ -6,7 +6,10 @@
     <title>kes portfolio</title>
     <!-- link -->
     <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- splitting-->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="./css/aos.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -14,7 +17,12 @@
     <!-- script -->
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery.fullpage.min.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- splitting-->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/script.js"></script>
   </head>
@@ -22,6 +30,32 @@
   <body>
     <!-- s: cursor -->
     <div class="custom-cursor"></div>
+    <!-- e: cursor -->
+
+    <!-- s: submenu -->
+    <div class="dim"></div>
+    <div class="submenu-wrap">
+      <div class="btn-wrap">
+        <button type="button" class="btn-home">
+          <a href="#section1">KES</a>
+        </button>
+      </div>
+      <ul class="submenu-list">
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Project</a></li>
+        <li><a href="#section4">Contact</a></li>
+      </ul>
+    </div>
+    <!-- e: submenu -->
+
+    <!-- s: gnb -->
+    <div class="gnb">
+      <a href="#" class="btn-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+      </a>
+    </div>
+    <!-- e: gnb -->
 
     <!-- s: header -->
     <header id="header">
@@ -35,11 +69,6 @@
             <li data-menuanchor="section3"><a href="#section3">Project</a></li>
             <li data-menuanchor="section4"><a href="#section4">Contact</a></li>
           </ul>
-          <div class="gnb">
-            <button type="button" class="btn-menu">
-              <i class="hidden">menu</i>
-            </button>
-          </div>
         </nav>
       </div>
     </header>
@@ -52,12 +81,8 @@
         <div class="inner">
           <div class="design-info">
             <p>2024</p>
-            <h2><b>UX</b> designer</h2>
-            <strong
-              ><a href="mailto:k.eunso1027@gmail.com"
-                >+ k.eunso1027@gmail.com</a
-              ></strong
-            >
+            <h2 data-splitting><b>UX</b> designer</h2>
+            <strong><a href="mailto:k.eunso1027@gmail.com">+ k.eunso1027@gmail.com</a></strong>
           </div>
 
           <div class="scroll-btn">
@@ -141,10 +166,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-01.png"
-                        alt="slide1"
-                      /></figure
+                      <img src="./img/project-pic-01.png" alt="slide1" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">ux design</strong>
@@ -157,12 +179,9 @@
 
                 <!-- Slides2 -->
                 <div class="swiper-slide">
-                  <a href="#"
+                  <a href="https://www.behance.net/gallery/200191801/_"
                     ><figure>
-                      <img
-                        src="./img/project-pic-02.png"
-                        alt="slide2"
-                      /></figure
+                      <img src="./img/project-pic-02.png" alt="slide2" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">ux design</strong>
@@ -177,10 +196,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-03.png"
-                        alt="slide3"
-                      /></figure
+                      <img src="./img/project-pic-03.png" alt="slide3" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">microsite design</strong>
@@ -195,10 +211,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-04.png"
-                        alt="slide4"
-                      /></figure
+                      <img src="./img/project-pic-04.png" alt="slide4" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">ux design</strong>
@@ -213,10 +226,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-05.png"
-                        alt="slide5"
-                      /></figure
+                      <img src="./img/project-pic-05.png" alt="slide5" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">page design</strong>
@@ -231,10 +241,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-06.png"
-                        alt="slide6"
-                      /></figure
+                      <img src="./img/project-pic-06.png" alt="slide6" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">page design</strong>
@@ -249,10 +256,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-07.png"
-                        alt="slide7"
-                      /></figure
+                      <img src="./img/project-pic-07.png" alt="slide7" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">page design</strong>
@@ -267,10 +271,7 @@
                 <div class="swiper-slide">
                   <a href="#"
                     ><figure>
-                      <img
-                        src="./img/project-pic-08.png"
-                        alt="slide8"
-                      /></figure
+                      <img src="./img/project-pic-08.png" alt="slide8" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">page design</strong>
@@ -283,12 +284,9 @@
 
                 <!-- Slides9 -->
                 <div class="swiper-slide">
-                  <a href="#"
+                  <a href="https://www.behance.net/gallery/154153447/Medicpet_-"
                     ><figure>
-                      <img
-                        src="./img/project-pic-09.png"
-                        alt="slide9"
-                      /></figure
+                      <img src="./img/project-pic-09.png" alt="slide9" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">ux design</strong>
@@ -301,12 +299,9 @@
 
                 <!-- Slides10 -->
                 <div class="swiper-slide">
-                  <a href="#"
+                  <a href="https://www.behance.net/gallery/154244789/Cocacola-Korea_Website-Virtual-Renewal-Project"
                     ><figure>
-                      <img
-                        src="./img/project-pic-10.png"
-                        alt="slide10"
-                      /></figure
+                      <img src="./img/project-pic-10.png" alt="slide10" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">ux design</strong>
@@ -319,12 +314,9 @@
 
                 <!-- Slides11 -->
                 <div class="swiper-slide">
-                  <a href="#"
+                  <a href="https://www.behance.net/gallery/134034159/Luple-Redesign"
                     ><figure>
-                      <img
-                        src="./img/project-pic-11.png"
-                        alt="slide11"
-                      /></figure
+                      <img src="./img/project-pic-11.png" alt="slide11" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">ux design</strong>
@@ -337,12 +329,9 @@
 
                 <!-- Slides12 -->
                 <div class="swiper-slide">
-                  <a href="#"
+                  <a href="https://www.behance.net/gallery/118584939/AdInCar_Car-AR-Advertising-Platform-Service"
                     ><figure>
-                      <img
-                        src="./img/project-pic-12.png"
-                        alt="slide12"
-                      /></figure
+                      <img src="./img/project-pic-12.png" alt="slide12" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">service design</strong>
@@ -355,12 +344,9 @@
 
                 <!-- Slides13 -->
                 <div class="swiper-slide">
-                  <a href="#"
+                  <a href="https://www.behance.net/gallery/118422639/Sell-We_-"
                     ><figure>
-                      <img
-                        src="./img/project-pic-13.png"
-                        alt="slide13"
-                      /></figure
+                      <img src="./img/project-pic-13.png" alt="slide13" /></figure
                   ></a>
                   <div class="slide-info">
                     <strong class="category">service design</strong>
@@ -373,6 +359,15 @@
               </div>
             </div>
           </div>
+
+          <!-- 원으로 표시되는 진행률 -->
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 106 106">
+              <circle cx="53" cy="53" r="51"></circle>
+            </svg>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- 원으로 표시되는 진행률 -->
         </div>
       </section>
 
@@ -383,10 +378,9 @@
           <div class="contact-wrap">
             <div class="sentance">
               <p>
-                <span class="indent"></span>A UX/UI designer and web publisher
-                who acts as a stepping stone between designers and developers. I
-                want to grow based on a steady record and provide an excellent
-                user experience.
+                <span class="indent"></span>A UX/UI designer and web publisher who acts as a stepping stone between
+                designers and developers. I want to grow based on a steady record and provide an excellent user
+                experience.
               </p>
             </div>
             <div class="c-phone">
@@ -406,12 +400,8 @@
             <div class="c-SNS">
               <h4>SNS</h4>
               <div class="link">
-                <a href="https://www.behance.net/eunsokim"
-                  ><i class="hidden">behance</i></a
-                >
-                <a href="https://www.linkedin.com/in/keunso1027/"
-                  ><i class="hidden">linkedin</i></a
-                >
+                <a href="https://www.behance.net/eunsokim"><i class="hidden">behance</i></a>
+                <a href="https://www.linkedin.com/in/keunso1027/"><i class="hidden">linkedin</i></a>
               </div>
             </div>
           </div>
@@ -436,10 +426,7 @@
               <div class="popup-contents">
                 <dl>
                   <dt>2017 - 2022</dt>
-                  <dd>
-                    성신여자대학교 서비스·디자인공학 공학사 <br />성신여자대학교
-                    심리학 문학사
-                  </dd>
+                  <dd>성신여자대학교 서비스·디자인공학 공학사 <br />성신여자대학교 심리학 문학사</dd>
                 </dl>
                 <dl>
                   <dt>2014 - 2017</dt>
@@ -464,10 +451,7 @@
               <div class="popup-contents">
                 <dl>
                   <dt>2021</dt>
-                  <dd>
-                    성신여대 대학혁신지원사업활동장학금 수여 <br />성신여대
-                    S+마일리지 장학금 수여
-                  </dd>
+                  <dd>성신여대 대학혁신지원사업활동장학금 수여 <br />성신여대 S+마일리지 장학금 수여</dd>
                 </dl>
                 <dl>
                   <dt>2020</dt>
@@ -476,17 +460,13 @@
                 <dl>
                   <dt>2019</dt>
                   <dd>
-                    성신여대 제9회 창업캠프 대상 <br />광주디자인비엔날레
-                    크라우드펀딩 콘테스트 우수상 <br />아트창업빌리지 프로그램
-                    입상
+                    성신여대 제9회 창업캠프 대상 <br />광주디자인비엔날레 크라우드펀딩 콘테스트 우수상
+                    <br />아트창업빌리지 프로그램 입상
                   </dd>
                 </dl>
                 <dl>
                   <dt>2018</dt>
-                  <dd>
-                    성신여대 멘토링 결과보고서 우수상 <br />성신여대
-                    학업성적우수 성신장학금 수여
-                  </dd>
+                  <dd>성신여대 멘토링 결과보고서 우수상 <br />성신여대 학업성적우수 성신장학금 수여</dd>
                 </dl>
                 <dl>
                   <dt>2017 - 2022</dt>
@@ -508,18 +488,16 @@
                 <dl>
                   <dt>2021</dt>
                   <dd>
-                    디자인코리아 2021 ‘Luple OLLY’ 참가 <br />Luple OLLY X
-                    성신여대 웹페이지 개선 산학협력 프로젝트 <br />Luple 사용
-                    후기 공유 및 사용성 평가 실행
+                    디자인코리아 2021 ‘Luple OLLY’ 참가 <br />Luple OLLY X 성신여대 웹페이지 개선 산학협력 프로젝트
+                    <br />Luple 사용 후기 공유 및 사용성 평가 실행
                   </dd>
                 </dl>
                 <dl>
                   <dt>2020</dt>
                   <dd>
-                    2020 솔직챌린지 공모전 참가 <br />과학기술정보통신부
-                    2020융합연구활성화 아이디어 공모전 참가 <br />국민 참여 예산
-                    공모전 참가 <br />여수시 2020 포스트 코로나 대응 제안 공모전
-                    참가 <br />한국디자인학회 2020 봄 국제 학술대회 참가
+                    2020 솔직챌린지 공모전 참가 <br />과학기술정보통신부 2020융합연구활성화 아이디어 공모전 참가
+                    <br />국민 참여 예산 공모전 참가 <br />여수시 2020 포스트 코로나 대응 제안 공모전 참가
+                    <br />한국디자인학회 2020 봄 국제 학술대회 참가
                   </dd>
                 </dl>
               </div>
@@ -538,21 +516,18 @@
                 <dl>
                   <dt>2019</dt>
                   <dd>
-                    성신여대 벤처 창업 동아리 MAGI 20기 <br />성신여대
-                    초기창업패키지 2019 창업동아리 ‘토모즈’ 활동 <br />코웨이 X
-                    성신여대 제품 서비스 시스템 기획 산학협력 프로젝트
-                    <br />성신여대 대동제 플리마켓 부스 참가 <br />와디즈
-                    광주디자인비엔날레 크라우드 펀딩 콘테스트 참가 <br />2019
-                    성신여대 제 9회 창업캠프 참가
+                    성신여대 벤처 창업 동아리 MAGI 20기 <br />성신여대 초기창업패키지 2019 창업동아리 ‘토모즈’ 활동
+                    <br />코웨이 X 성신여대 제품 서비스 시스템 기획 산학협력 프로젝트 <br />성신여대 대동제 플리마켓
+                    부스 참가 <br />와디즈 광주디자인비엔날레 크라우드 펀딩 콘테스트 참가 <br />2019 성신여대 제 9회
+                    창업캠프 참가
                   </dd>
                 </dl>
                 <dl>
                   <dt>2017</dt>
                   <dd>
                     딤채 X 성신여대 서비스 디자인기획 산학협력 프로젝트
-                    <br />굿네이버스 X 성신여대 굿샵 서비스 디자인 산학협력
-                    프로젝트 <br />‘예술로 목욕하는날 행화탕 별빛 소나타 에튀드’
-                    전시기획 프로젝트
+                    <br />굿네이버스 X 성신여대 굿샵 서비스 디자인 산학협력 프로젝트 <br />‘예술로 목욕하는날 행화탕
+                    별빛 소나타 에튀드’ 전시기획 프로젝트
                   </dd>
                 </dl>
               </div>
@@ -570,10 +545,7 @@
               <div class="popup-contents">
                 <dl>
                   <dt>2024</dt>
-                  <dd>
-                    (디지털디자인) Figma활용 UI/UX 반응형 웹디자인 & 웹퍼블리셔
-                    1 수강
-                  </dd>
+                  <dd>(디지털디자인) Figma활용 UI/UX 반응형 웹디자인 & 웹퍼블리셔 1 수강</dd>
                 </dl>
                 <dl>
                   <dt>2022</dt>
@@ -590,10 +562,9 @@
                 <dl>
                   <dt>2017</dt>
                   <dd>
-                    대구 한국디자인학회 국제 학술대회 참석 <br />성신여대 3D
-                    모델링 & 3D프린팅 교육 수료 <br />성신여대 X 브루넬대학교
-                    글로벌 파이퀘트스 영국 워크샵 <br />성신여대 글로벌 교육
-                    트랜드 캐치업 프로그램 특강 참석
+                    대구 한국디자인학회 국제 학술대회 참석 <br />성신여대 3D 모델링 & 3D프린팅 교육 수료 <br />성신여대
+                    X 브루넬대학교 글로벌 파이퀘트스 영국 워크샵 <br />성신여대 글로벌 교육 트랜드 캐치업 프로그램 특강
+                    참석
                   </dd>
                 </dl>
               </div>
@@ -625,7 +596,7 @@
                 <strong>~2024</strong>
               </div>
               <span><i class="hidden">line</i></span>
-              <div class="popup-contents skills">
+              <div class="popup-contents about-skills">
                 <dl>
                   <dt>Adobe Photoshop</dt>
                   <dd>

@@ -43,7 +43,8 @@ hr,
 }
 
 .inner {
-  width: 172rem;
+  /* width: 172rem; */
+  width: 89.5834%;
   height: 100%;
   margin: 0 auto;
 }
