@@ -12,9 +12,6 @@ $(function () {
   tl.from('.go-portfolio', { y: -100, autoAlpha: 0 });
   // e: 애니메이션
 
-  //splitting
-  // Splitting();
-
   // 변수저장
   // AOS.init();
   const $btnTop = $('.btn-top');
@@ -66,10 +63,12 @@ $(function () {
     afterLoad: function (anchorLink, index) {
       if (anchorLink === 'section2') {
         // s: about-ani
+        $('.section2 h2').css('opacity', 1);
         // tl.from('.section2 h2', { y: -100, autoAlpha: 0 });
         // tl.from('.section2 .dashboard', { y: -100, autoAlpha: 0 });
       }
       if (anchorLink === 'section3') {
+        $('.section3 h2').css('opacity', 1);
         // s: project-ani
         // tl.from('.section3 h2', { y: -100, autoAlpha: 0 });
         // tl.from('.autoplay-progress', { y: -100, autoAlpha: 0 });
@@ -78,12 +77,21 @@ $(function () {
       if (anchorLink === 'section4') {
         // s: contact-ani
         // tl.from('.section4 h2', { y: -100, autoAlpha: 0 });
+        // tl.from('.section4 h2', { x: -50, autoAlpha: 0, duration: 1 });
         // section4 영역에 진입하면 탑 버튼 보임
+        $('.section4 h2').css('opacity', 1);
         $btnTop.fadeIn();
       }
 
-      AOS.init();
-      $aniEl.addClass('aos-animate');
+      // AOS.init();
+      // $aniEl.addClass('aos-animate');
+
+      //splitting
+      $('.section h2')
+        .eq(index - 1)
+        .attr('data-splitting', '');
+
+      Splitting();
     },
 
     // 영역을 떠나갈 때
@@ -92,11 +100,14 @@ $(function () {
       if (index === 1) {
       }
       if (index === 2) {
+        // $('.section2 h2').css('opacity', 0);
       }
       if (index === 3) {
+        // $('.section3 h2').css('opacity', 0);
       }
       // 4번 영역을 떠나가거나 마우스 휠을 올렸을 때
       if (index === 4 || direction === 'up') {
+        // $('.section4 h2').css('opacity', 0);
         $btnTop.fadeOut();
       }
       $aniEl.removeClass('aos-animate');
@@ -122,20 +133,12 @@ $(function () {
       type: 'fraction',
     },
 
+    // 원으로 진행률 표시
     on: {
       autoplayTimeLeft(swiper, timeLeft, percentage) {
-        // console.log(timeLeft, percentage);
-        //timeLeft: 남은 시간 (ms)
-        //percentage: 진행 상태를 1~0사이의 값으로 표현
-
-        // 원으로 진행률 표시
         document.querySelector('.autoplay-progress svg').style.setProperty('--progress', 1 - percentage);
-
-        // ceil: 올림, 올림한 값을 정수로 표현
-        // document.querySelector('.autoplay-progress span').textContent = `${Math.ceil(timeLeft / 1000)}s`;
-        // document.querySelector('.autoplay-progress span').textContent = Math.ceil((1 - percentage) * 100) + '%';
-        // 원으로 진행률 표시
       },
+      // 원으로 진행률 표시
     },
   });
 

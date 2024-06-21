@@ -168,6 +168,16 @@
   left: 0;
   transform: translateX(-25%) rotate(-90deg);
 }
+
+.section2 h2 {
+  opacity: 0;
+}
+.section3 h2 {
+  opacity: 0;
+}
+.section4 h2 {
+  opacity: 0;
+}
 /* //e: 공통 부분 */
 
 /* s: Home */
@@ -969,15 +979,16 @@
 /* //e: contact */
 
 /* s: h2 animation */
+
 @keyframes textAni {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateX(-100px);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
   }
 }
 
