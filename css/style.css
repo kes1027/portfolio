@@ -993,7 +993,7 @@
 }
 
 .char {
-  animation: textAni 2s;
+  animation: textAni 2s both;
   animation-delay: calc(100ms * var(--char-index));
 }
 /* e: h2 animation */

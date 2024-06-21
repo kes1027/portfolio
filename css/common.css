@@ -26,6 +26,10 @@ a:hover {
   cursor: none;
 }
 
+button:hover {
+  cursor: none;
+}
+
 /* 블럭설정 */
 ::selection {
   background: var(--black-color);

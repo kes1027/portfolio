@@ -36,6 +36,16 @@ $(function () {
     // 햄버거 버튼에 on클래스 토글
     $btnMenu.toggleClass('on');
   });
+
+  // 클릭 했을때 메뉴창이 숨겨지게
+  $('.submenu-list li').on('click', function () {
+    $menuWrap.removeClass('active');
+    $dim.fadeToggle();
+
+    // 햄버거 버튼에 on클래스 토글
+    $btnMenu.removeClass('on');
+  });
+
   // e: 서브 메뉴 버튼
 
   // 탑버튼
@@ -61,37 +71,18 @@ $(function () {
 
     // s: 애니메이션
     afterLoad: function (anchorLink, index) {
-      if (anchorLink === 'section2') {
-        // s: about-ani
-        $('.section2 h2').css('opacity', 1);
-        // tl.from('.section2 h2', { y: -100, autoAlpha: 0 });
-        // tl.from('.section2 .dashboard', { y: -100, autoAlpha: 0 });
-      }
-      if (anchorLink === 'section3') {
-        $('.section3 h2').css('opacity', 1);
-        // s: project-ani
-        // tl.from('.section3 h2', { y: -100, autoAlpha: 0 });
-        // tl.from('.autoplay-progress', { y: -100, autoAlpha: 0 });
-        // tl.from('.section3 .project-slider-wrap', { y: -100, autoAlpha: 0 }, '-=0.3');
-      }
+      $('section h2')
+        .eq(index - 1)
+        .css('opacity', 1)
+        .attr('data-splitting', '');
+      Splitting();
+
       if (anchorLink === 'section4') {
-        // s: contact-ani
-        // tl.from('.section4 h2', { y: -100, autoAlpha: 0 });
-        // tl.from('.section4 h2', { x: -50, autoAlpha: 0, duration: 1 });
-        // section4 영역에 진입하면 탑 버튼 보임
-        $('.section4 h2').css('opacity', 1);
         $btnTop.fadeIn();
       }
 
       // AOS.init();
       // $aniEl.addClass('aos-animate');
-
-      //splitting
-      $('.section h2')
-        .eq(index - 1)
-        .attr('data-splitting', '');
-
-      Splitting();
     },
 
     // 영역을 떠나갈 때
