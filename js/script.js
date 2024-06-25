@@ -172,6 +172,17 @@ $(function () {
       }
     );
   });
+
+  $('.c-phone p').each((index, link) => {
+    $(link).hover(
+      () => {
+        $cursor.addClass('hover');
+      },
+      () => {
+        $cursor.removeClass('hover');
+      }
+    );
+  });
   // e: 마우스 크기 및 색 바꾸기
 
   // s: popup slide
@@ -229,4 +240,18 @@ $(function () {
     }, 100);
   }
   // //e: popup slide
+
+  // s: 전화번호 복사
+
+  // e: 전화번호 복사
+  $('.btn-clipboard').click(function () {
+    //-를 제외한 숫자만 복사하기
+    var textToCopy = $(this).text().replace(/-/g, '');
+    var tempTextarea = $('<textarea>');
+    $('body').append(tempTextarea);
+    tempTextarea.val(textToCopy).select();
+    document.execCommand('copy');
+    tempTextarea.remove();
+    // alert('클립보드에 복사되었습니다.');
+  });
 }); // end: jQuery
