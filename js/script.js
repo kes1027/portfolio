@@ -242,8 +242,6 @@ $(function () {
   // //e: popup slide
 
   // s: 전화번호 복사
-
-  // e: 전화번호 복사
   $('.btn-clipboard').click(function () {
     //-를 제외한 숫자만 복사하기
     var textToCopy = $(this).text().replace(/-/g, '');
@@ -254,4 +252,5 @@ $(function () {
     tempTextarea.remove();
     // alert('클립보드에 복사되었습니다.');
   });
+  // e: 전화번호 복사
 }); // end: jQuery
