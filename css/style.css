@@ -939,7 +939,7 @@
   display: inline-block;
   width: 34px;
   height: 35px;
-  background: url(/img/copy.svg) no-repeat 50%;
+  background: url(../img/copy.svg) no-repeat 50%;
 }
 
 .section4 .inner .contact-wrap .c-name {
