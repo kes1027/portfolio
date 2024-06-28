@@ -60,6 +60,11 @@ body {
   cursor: none;
 }
 
+.section h2 {
+  pointer-events: none;
+  user-select: none;
+}
+
 /* s: cursor events */
 .custom-cursor {
   position: absolute;
