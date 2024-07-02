@@ -83,13 +83,13 @@ body {
 }
 
 .custom-cursor.hover {
-  transition: 0.4s;
+  /* transition: 0.4s; */
   width: 80px;
   height: 80px;
 }
 
 .custom-cursor.light {
-  transition: 0.4s;
+  /* transition: 0.4s; */
   width: 80px;
   height: 80px;
   border-color: #fff;
