@@ -1011,3 +1011,71 @@
   animation-delay: calc(100ms * var(--char-index));
 }
 /* e: h2 animation */
+
+
+/* 250425_반응형 추가 */
+/* 1720px */
+@media screen and (max-width: 1720px) {
+  .section .inner h2 {
+      font-size: 28rem;
+      letter-spacing: -6px;
+  }
+}
+
+/* 1260px */
+@media screen and (max-width: 1260px) {
+  .section .inner h2 {
+      font-size: 25rem;
+      letter-spacing: -6px;
+  }
+
+  .section1 .inner .design-info a {
+    font-size: 3rem;  
+  }
+}
+
+/* 1120px */
+@media screen and (max-width: 1120px) {
+  .section .inner h2 {
+      font-size: 22rem;
+      letter-spacing: -6px;
+  }
+  .section1 .inner .design-info a {
+    font-size: 2.5rem;  
+  }
+}
+
+/* 990px */
+@media screen and (max-width: 990px) {
+  .section .inner h2 {
+      font-size: 18rem;
+      letter-spacing: -6px;
+  }
+  .section1 .inner .design-info a {
+    font-size: 2.3rem;  
+  }
+}
+
+/* 여기서부터 모바일 */
+/* 768px */
+@media screen and (max-width: 768px) {
+  .section .inner h2 {
+      font-size: 14rem;
+      letter-spacing: -6px;
+  }
+  .section1 .inner .design-info a {
+    font-size: 2.3rem;  
+  }
+
+  .section1 .inner .scroll-btn {
+    display: none;
+}
+}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+  .section .inner h2 {
+      font-size: 8rem;
+      letter-spacing: -3px;
+  }
+}
